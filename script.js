@@ -7,7 +7,7 @@ function kod_generate(){
       var str_base = matches[i];
       var str = str_base.substring(2, str_base.length - 2);
 
-      $.getJSON( "<?= get_template_directory_uri(); ?>/assets/json/data.json", function( data ) {
+      $.getJSON( "data.json", function( data ) {
         $.each( data, function( key, val ) {
         if(str === key){
           $("div.woocommerce-variation-add-to-cart").html($("div.woocommerce-variation-add-to-cart").html().replace(str_base,val));
